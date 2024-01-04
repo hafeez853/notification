@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val button = findViewById<Button>(R.id.btn)
+        add()
         notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         button.setOnClickListener {
             val intent = Intent(this, NotificationViewActivity::class.java)
@@ -66,6 +67,10 @@ class MainActivity : AppCompatActivity() {
             }
             notificationManager.notify(1234, builder.build())
         }
+
+    }
+   private fun add(){
+       println("Here is me")
 
     }
 }
